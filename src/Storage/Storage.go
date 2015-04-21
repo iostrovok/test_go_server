@@ -122,7 +122,7 @@ func (storage *Storage) Start(WG *sync.WaitGroup,
 
 	storage.StartReadWeb(WG, fromWeb)
 
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 100; i++ {
 		storage.StartOne(WG, fromUser, i)
 	}
 }
